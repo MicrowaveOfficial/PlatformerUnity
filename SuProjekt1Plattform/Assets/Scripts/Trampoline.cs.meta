@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 59d82f2224673014cb9729c27184726e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - boing: {fileID: 8300000, guid: 1e3c68b4a0b91ee469b529f4b3c8fd05, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

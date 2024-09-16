@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bb7f55791f39ed94290513c199e12a32
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - leftFoot: {instanceID: 0}
+  - rightFoot: {instanceID: 0}
+  - spawnPosition: {instanceID: 0}
+  - healthSlider: {instanceID: 0}
+  - healthColor: {instanceID: 0}
+  - pickupSound: {fileID: 8300000, guid: ed8a1bbacc97720419edec8deefc101b, type: 3}
+  - takeDamage: {fileID: 8300000, guid: 2bab220250bc3d64c9f24739327f5a4f, type: 3}
+  - death: {fileID: 8300000, guid: b05fa5fcdb0d44441b69ac80b5364672, type: 3}
+  - redGemText: {instanceID: 0}
+  - gemParticles: {instanceID: 0}
+  - dustParticles: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
