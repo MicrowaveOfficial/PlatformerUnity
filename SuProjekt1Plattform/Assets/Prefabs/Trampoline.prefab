@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d82f2224673014cb9729c27184726e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 500
+  jumpForce: 900
   boing: {fileID: 8300000, guid: 1e3c68b4a0b91ee469b529f4b3c8fd05, type: 3}
 --- !u!82 &-1409026189071015861
 AudioSource:

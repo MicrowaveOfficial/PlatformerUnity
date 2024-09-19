@@ -7,6 +7,7 @@ using TMPro;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
+    private float ogMoveSpeed;
     [SerializeField] private float jumpForce = 300f;
     [SerializeField] private Transform leftFoot, rightFoot;
     [SerializeField] private LayerMask whatIsGround;
@@ -14,6 +15,15 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool canMove;
     private float rayDistance = 0.3f;
+
+    public bool canDash;
+    [SerializeField] private float dashBoost;
+    [SerializeField] private float dashDuration;
+    //private bool isDashing;
+    //private float dashingCooldown = 2f;
+    //[SerializeField] private float dashForce = 300f;  
+    //[SerializeField] private Image dashIcon;
+    //[SerializeField] private float dashTime = 0.2f;
 
     private int startingHealth = 5;
     private int currentHealth = 0;
@@ -34,12 +44,13 @@ public class PlayerMovement : MonoBehaviour
 
     private AudioSource audioSource;
 
-    // Start is called before the first frame update
     void Start()
     {
+        ogMoveSpeed = moveSpeed;
         currentHealth = startingHealth;
         redGemText.text = "" + redGemsCollected;
         canMove = true;
+        canDash = true;
 
         RigBody = GetComponent<Rigidbody2D>();
         sprRend = GetComponent<SpriteRenderer>();
@@ -64,6 +75,13 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+
+        if (Input.GetKeyDown("space") && canDash == true && !groundCheck())
+        {
+            Dash();
+        }
+
+        /* if(Input.GetKey*/
 
         anim.SetFloat("MoveSpeed", Mathf.Abs(RigBody.velocity.x));
         anim.SetFloat("VerticalSpeed", RigBody.velocity.y);
@@ -110,6 +128,52 @@ public class PlayerMovement : MonoBehaviour
         int randomValue = Random.Range(0, jumpSounds.Length);
         audioSource.PlayOneShot(jumpSounds[randomValue], 0.4f);
         Instantiate(dustParticles, transform.position, dustParticles.transform.localRotation);
+    }
+
+    private void Dash()
+    {
+        //canDash = false;
+
+        //if (sprRend.flipX == true)
+        //{
+        //    RigBody.AddForce(new Vector2(-dashForce, 0));
+        //}
+
+        //else if (sprRend.flipX == false)
+        //{
+        //RigBody.velocity = new Vector2(RigBody.velocity.y * 0, RigBody.velocity.x * dashForce);
+
+        canDash = false;
+        moveSpeed = moveSpeed * dashBoost;
+        Invoke("StopDash", dashDuration);
+    }
+
+    //private void Dash()
+    //{
+    //    canDash = false;
+    //    isDashing = true;
+    //    float originalGravity = RigBody.gravityScale;
+    //    //RigBody.gravityScale = 0;
+    //    RigBody.velocity = new Vector2(transform.localScale.x * dashForce, 0f);
+    //    //RigBody.AddForce(new Vector2(dashForce, originalGravity));
+    //    yield return new WaitForSeconds(dashTime);
+
+    //    RigBody.gravityScale = originalGravity;
+    //    isDashing = false;
+    //    yield return new WaitForSeconds(dashingCooldown);
+    //    canDash = true;
+    //    Debug.Log("Hej");
+    //}
+
+    public void StopDash()
+    {
+        print("hola");
+        moveSpeed = ogMoveSpeed;
+    }
+
+    public void EnableDash()
+    {
+        canDash = true;
     }
 
     public void TakeDamage(int damageAmount)
@@ -197,7 +261,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (leftHit.collider != null && leftHit.collider.CompareTag("Ground") || rightHit.collider != null && rightHit.collider.CompareTag("Ground"))
         {
-            return true;
+            canDash = true;
+            return true;          
         }
 
         else
