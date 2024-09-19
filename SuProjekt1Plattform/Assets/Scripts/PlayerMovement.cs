@@ -19,14 +19,9 @@ public class PlayerMovement : MonoBehaviour
     public bool canDash;
     [SerializeField] private float dashBoost;
     [SerializeField] private float dashDuration;
-    //private bool isDashing;
-    //private float dashingCooldown = 2f;
-    //[SerializeField] private float dashForce = 300f;  
-    //[SerializeField] private Image dashIcon;
-    //[SerializeField] private float dashTime = 0.2f;
 
-    private int startingHealth = 5;
-    private int currentHealth = 0;
+    public int startingHealth = 5;
+    public int currentHealth = 0;
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Image healthColor;
@@ -132,42 +127,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Dash()
     {
-        //canDash = false;
-
-        //if (sprRend.flipX == true)
-        //{
-        //    RigBody.AddForce(new Vector2(-dashForce, 0));
-        //}
-
-        //else if (sprRend.flipX == false)
-        //{
-        //RigBody.velocity = new Vector2(RigBody.velocity.y * 0, RigBody.velocity.x * dashForce);
-
         canDash = false;
         moveSpeed = moveSpeed * dashBoost;
         Invoke("StopDash", dashDuration);
     }
 
-    //private void Dash()
-    //{
-    //    canDash = false;
-    //    isDashing = true;
-    //    float originalGravity = RigBody.gravityScale;
-    //    //RigBody.gravityScale = 0;
-    //    RigBody.velocity = new Vector2(transform.localScale.x * dashForce, 0f);
-    //    //RigBody.AddForce(new Vector2(dashForce, originalGravity));
-    //    yield return new WaitForSeconds(dashTime);
-
-    //    RigBody.gravityScale = originalGravity;
-    //    isDashing = false;
-    //    yield return new WaitForSeconds(dashingCooldown);
-    //    canDash = true;
-    //    Debug.Log("Hej");
-    //}
-
     public void StopDash()
     {
-        print("hola");
         moveSpeed = ogMoveSpeed;
     }
 
@@ -213,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
         RigBody.velocity = Vector2.zero;
     }
 
-    private void UpdateHealthBar()
+    public void UpdateHealthBar()
     {
 
         healthSlider.value = currentHealth;
