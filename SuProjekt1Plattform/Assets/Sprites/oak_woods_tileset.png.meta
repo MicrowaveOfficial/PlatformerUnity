@@ -433,48 +433,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oak_woods_tileset_38
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 264
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 078f8f2c752e7284db64a8c9c1de9553
-      internalID: 671393746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oak_woods_tileset_39
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 264
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 028d01f2c3a1fd54cb75b56a060e0a57
-      internalID: 1027747696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: oak_woods_tileset_40
       rect:
         serializedVersion: 2
@@ -659,27 +617,6 @@ TextureImporter:
       bones: []
       spriteID: 129ba1f36729e9c4aa290ab77c189f9b
       internalID: 290099318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall_bottom
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 216
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbf299c12f424be41b3988437eefd218
-      internalID: -2129319519
       vertices: []
       indices: 
       edges: []
@@ -1609,7 +1546,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oak_woods_tileset_103
+      name: Stone_Center1
       rect:
         serializedVersion: 2
         x: 288
@@ -1625,27 +1562,6 @@ TextureImporter:
       bones: []
       spriteID: d30db2798bd04d547820b3ef3f732227
       internalID: 1563158609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oak_woods_tileset_104
-      rect:
-        serializedVersion: 2
-        x: 312
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16c1b787bbc04164dab18a927ceffe80
-      internalID: 1980562064
       vertices: []
       indices: 
       edges: []
@@ -2701,27 +2617,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_top
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 288
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed5ae2a4ad6d9f045b71dcda54882c2b
-      internalID: -1413662400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: oak_woods_tileset_31
       rect:
         serializedVersion: 2
@@ -2738,27 +2633,6 @@ TextureImporter:
       bones: []
       spriteID: 15d7758e23e184d499b470546be4b024
       internalID: -2144534268
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall_center
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 240
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b434edbc6832a2943934ec990d0d560b
-      internalID: 467273278
       vertices: []
       indices: 
       edges: []
@@ -3288,6 +3162,132 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: oak_woods_tileset_27
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e4f6262ef2bca49bbb386a635b3383
+      internalID: 1348604742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone_Left
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed834ece2ca71fe488dd3b5ce54c7089
+      internalID: 1599328338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone_Right
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315e81bc867cb6c4394533b1d72b801f
+      internalID: 1678238205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oak_woods_tileset_44
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fc30110fb71124996e652e96ba6bf6
+      internalID: -2111789966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oak_woods_tileset_50
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6a6d44a6959284b936ee11e5cbbb7c
+      internalID: 312790729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone_Center2
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6970faadc7dca4f91258832677f479
+      internalID: 823028629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3299,14 +3299,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Stone_Center1: 1563158609
+      Stone_Center2: 823028629
+      Stone_Left: 1599328338
+      Stone_Right: 1678238205
       oak_woods_tileset_0: 632563079
       oak_woods_tileset_1: -1380233128
       oak_woods_tileset_10: 909902063
       oak_woods_tileset_100: -269841434
       oak_woods_tileset_101: -844288195
       oak_woods_tileset_102: 2047610710
-      oak_woods_tileset_103: 1563158609
-      oak_woods_tileset_104: 1980562064
       oak_woods_tileset_105: -1637818008
       oak_woods_tileset_106: -1253295031
       oak_woods_tileset_107: -744649428
@@ -3371,6 +3373,7 @@ TextureImporter:
       oak_woods_tileset_24: 233669626
       oak_woods_tileset_25: -286184411
       oak_woods_tileset_26: -1870411434
+      oak_woods_tileset_27: 1348604742
       oak_woods_tileset_28: -2041270374
       oak_woods_tileset_29: 1568699806
       oak_woods_tileset_3: 318884800
@@ -3382,19 +3385,19 @@ TextureImporter:
       oak_woods_tileset_35: -1516734431
       oak_woods_tileset_36: -969456461
       oak_woods_tileset_37: -163813898
-      oak_woods_tileset_38: 671393746
-      oak_woods_tileset_39: 1027747696
       oak_woods_tileset_4: -379809858
       oak_woods_tileset_40: 972613596
       oak_woods_tileset_41: 153825100
       oak_woods_tileset_42: 941902002
       oak_woods_tileset_43: -1765744827
+      oak_woods_tileset_44: -2111789966
       oak_woods_tileset_45: 1567285606
       oak_woods_tileset_46: 578696425
       oak_woods_tileset_47: 1390227639
       oak_woods_tileset_48: 1254202943
       oak_woods_tileset_49: 290099318
       oak_woods_tileset_5: 355054352
+      oak_woods_tileset_50: 312790729
       oak_woods_tileset_51: -132299423
       oak_woods_tileset_52: -1557154188
       oak_woods_tileset_53: -39623631
@@ -3448,9 +3451,6 @@ TextureImporter:
       oak_woods_tileset_97: -1732521810
       oak_woods_tileset_98: 649366690
       oak_woods_tileset_99: 2012458131
-      wall_bottom: -2129319519
-      wall_center: 467273278
-      wall_top: -1413662400
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
