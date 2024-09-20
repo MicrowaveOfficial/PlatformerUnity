@@ -5,8 +5,8 @@ using UnityEngine;
 public class KillZone : MonoBehaviour
 {
     [SerializeField] private Transform spawnPosition;
-    private AudioSource audioSource;
     [SerializeField] private AudioClip fallSound;
+    private AudioSource audioSource;
 
     private void Start()
     {
