@@ -19589,6 +19589,7 @@ MonoBehaviour:
   redGemText: {fileID: 386382051}
   gemParticles: {fileID: 4425748047488168145, guid: 1dd8e20af553f024fbfc72ab7d371aa9, type: 3}
   dustParticles: {fileID: 6139734847183916335, guid: 9d1ae5cfad88fae46a9e17a2830e5cdd, type: 3}
+  reloadSceneWhenKilled: 1
 --- !u!82 &1135689534
 AudioSource:
   m_ObjectHideFlags: 0

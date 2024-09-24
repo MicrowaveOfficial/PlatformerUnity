@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -36,8 +37,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D RigBody;
     private SpriteRenderer sprRend;
     private Animator anim;
-
     private AudioSource audioSource;
+    [SerializeField] private bool reloadSceneWhenKilled = true;
 
     void Start()
     {
@@ -149,10 +150,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            audioSource.PlayOneShot(death, 1f);
-            Respawn();
+            KillPlayer();
         }
-
         else
         {
             audioSource.PlayOneShot(takeDamage, 1f);
@@ -234,6 +233,20 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    public void KillPlayer()
+    {
+        audioSource.PlayOneShot(death, 1f);
+
+        if (reloadSceneWhenKilled)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else
+        {
+            Respawn();
         }
     }
 }

@@ -16,11 +16,8 @@ public class KillZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            audioSource.PlayOneShot(fallSound, 1f);
-            other.transform.position = spawnPosition.position;
-            other.GetComponent<PlayerMovement>().currentHealth = other.GetComponent<PlayerMovement>().startingHealth;
-            other.GetComponent<PlayerMovement>().UpdateHealthBar();
-            other.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            //audioSource.PlayOneShot(fallSound, 1f);
+            other.GetComponent<PlayerMovement>().KillPlayer();
         }
     }
 }
