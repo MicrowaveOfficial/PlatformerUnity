@@ -235,7 +235,7 @@ MonoBehaviour:
   target1: {fileID: 4204984360834627406}
   target2: {fileID: 698450410837100045}
   moveSpeed: 2
-  damageGiven: 1
+  damageGiven: 2
   knockForce: 200
   upwardForce: 100
   bounce: 200
