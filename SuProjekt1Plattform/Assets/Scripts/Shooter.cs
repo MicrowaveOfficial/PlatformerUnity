@@ -8,6 +8,9 @@ public class Shooter : MonoBehaviour
     [SerializeField] private float bounce = 200f;
     [SerializeField] private int damageGiven = 1;
     [SerializeField] private float coolDown = 2f;
+    [SerializeField] private GameObject projectile;
+    private bool direction;
+    [SerializeField] private float projectileOffset = 0.8f;
     private SpriteRenderer rend;
     private bool canMove = true;
 
@@ -26,14 +29,16 @@ public class Shooter : MonoBehaviour
         
         transform.Translate(new Vector2 (moveSpeed, 0) * Time.deltaTime);
 
-        if (moveSpeed > 0)
-        {
-            rend.flipX = true;
-        }
-
         if (moveSpeed < 0)
         {
+            rend.flipX = true;
+            direction = false;
+        }
+
+        if (moveSpeed > 0)
+        {
             rend.flipX = false;
+            direction = true;
         }
     }
 
@@ -52,9 +57,12 @@ public class Shooter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(direction == false)  projectileOffset = -projectileOffset;
+
+        Instantiate(projectile, transform.position + (transform.forward * projectileOffset), transform.rotation);
         if (other.CompareTag("Player"))
         {
-            //skjut
+            other.gameObject.GetComponent<ProjectileMovement>().ProjectileBehavior(other, direction);
         }
     }
 }

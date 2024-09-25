@@ -6,9 +6,16 @@ public class ProjectileMovement : MonoBehaviour
 {
     [SerializeField] private float projectileSpeed = 2f;
     [SerializeField] private int damage = 1;
-    void Start()
+    private SpriteRenderer rend;
+
+    private void Start()
     {
-        
+        rend = GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        transform.Translate(new Vector2(projectileSpeed, 0) * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -19,4 +26,13 @@ public class ProjectileMovement : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void ProjectileBehavior(Collider2D other, bool direction)
+    {
+        if(direction == false)
+        {
+            projectileSpeed = -projectileSpeed;
+            rend.flipX = false;
+        }
+} 
 }
