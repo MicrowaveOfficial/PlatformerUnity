@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private AudioSource audioSource;
     [SerializeField] private bool reloadSceneWhenKilled = true;
+    [SerializeField] private bool startPosition = true;
 
     void Start()
     {
@@ -52,6 +53,11 @@ public class PlayerMovement : MonoBehaviour
         sprRend = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+
+        if(startPosition == true)
+        {
+            transform.position = spawnPosition.position;
+        }
     }
 
     void Update()
