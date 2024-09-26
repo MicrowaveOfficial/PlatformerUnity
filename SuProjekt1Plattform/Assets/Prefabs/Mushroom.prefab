@@ -127,7 +127,6 @@ MonoBehaviour:
   damageGiven: 1
   knockForce: 300
   upwardForce: 180
-  mushDeath: {fileID: 8300000, guid: e750394b5793a4a4092beb566eeb62f0, type: 3}
 --- !u!50 &3092500942214910411
 Rigidbody2D:
   serializedVersion: 4
@@ -187,9 +186,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0072979927, y: 0.44119132}
+  m_Offset: {x: 0, y: 0.41999996}
   serializedVersion: 2
-  m_Radius: 0.42062712
+  m_Radius: 0.40298152
 --- !u!61 &3973344734150353245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -222,7 +221,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0018851757, y: 0.81547713}
+  m_Offset: {x: 0, y: 0.8235251}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -233,5 +232,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62290907, y: 0.13746119}
+  m_Size: {x: 0.6510773, y: 0.15355706}
   m_EdgeRadius: 0
