@@ -21,43 +21,6 @@ public class Shooter : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
-
-    void FixedUpdate()
-    {
-        //if (!canMove)     
-        //    return;   
-        
-        //transform.Translate(new Vector2 (moveSpeed, 0) * Time.deltaTime);
-
-        //if (moveSpeed < 0)
-        //{
-        //    rend.flipX = true;
-        //    direction = false;
-        //}
-
-        //if (moveSpeed > 0)
-        //{
-        //    rend.flipX = false;
-        //    direction = true;
-        //}
-    }
-
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    print("collision");
-    //    if (other.gameObject.CompareTag("EnemyBlock"))
-    //    {
-    //        print("enemy");
-    //        moveSpeed = -moveSpeed;
-    //    }
-
-    //    if (other.gameObject.CompareTag("Enemy"))
-    //    {
-    //        moveSpeed = -moveSpeed;
-    //    }
-    //}
-
-
     private void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -81,14 +44,8 @@ public class Shooter : MonoBehaviour
         }
     }
 
-    public void Test()
-    {
-        print("Hej");
-    }
-
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))  anim.SetBool("Shooting", false);
-        canShoot = false;
     }
 }
