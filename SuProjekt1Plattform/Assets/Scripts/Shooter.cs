@@ -42,20 +42,20 @@ public class Shooter : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        print("collision");
-        if (other.gameObject.CompareTag("EnemyBlock"))
-        {
-            print("enemy");
-            moveSpeed = -moveSpeed;
-        }
+    //private void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    print("collision");
+    //    if (other.gameObject.CompareTag("EnemyBlock"))
+    //    {
+    //        print("enemy");
+    //        moveSpeed = -moveSpeed;
+    //    }
 
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            moveSpeed = -moveSpeed;
-        }
-    }
+    //    if (other.gameObject.CompareTag("Enemy"))
+    //    {
+    //        moveSpeed = -moveSpeed;
+    //    }
+    //}
 
 
     private void OnTriggerEnter2D(Collider2D other)
