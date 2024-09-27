@@ -36,9 +36,7 @@ public class ProjectileMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-            print("Hej");
-            Destroy(gameObject);
-        
+            Destroy(gameObject);     
     }
 
     //public void ProjectileBehavior(Collider2D other, bool direction)

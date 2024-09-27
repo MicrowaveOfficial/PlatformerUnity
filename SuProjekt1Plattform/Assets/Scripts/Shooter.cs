@@ -11,7 +11,6 @@ public class Shooter : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private float projectileOffsetX = 0.8f;
     [SerializeField] private float projectileOffsetY = 0.8f;
-    private bool canShoot = true;
     private bool Shooting;
 
     private SpriteRenderer rend;
@@ -65,7 +64,6 @@ public class Shooter : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             anim.SetBool("Shooting", true);
-            canShoot = true;
         }
     }
 
@@ -92,10 +90,5 @@ public class Shooter : MonoBehaviour
     {
         if (other.CompareTag("Player"))  anim.SetBool("Shooting", false);
         canShoot = false;
-    }
-
-    private void ReadyShoot()
-    {
-        canShoot = true;
     }
 }
