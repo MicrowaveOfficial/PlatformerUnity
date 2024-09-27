@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
 {
     [SerializeField] private float projectileSpeed = 2f;
     [SerializeField] private int damage = 1;
-    [SerializeField] private float timeActive = 4f;
+    [SerializeField] private float timeActive = 6f;
+    [SerializeField] private bool direction;
     private SpriteRenderer rend;
 
     private void Start()
     {
         rend = GetComponent<SpriteRenderer>();
         Destroy(gameObject, timeActive);
+
+        if (direction == true) rend.flipX = true;
     }
 
     private void Update()
@@ -37,13 +41,13 @@ public class ProjectileMovement : MonoBehaviour
         
     }
 
-    public void ProjectileBehavior(Collider2D other, bool direction)
-    {
-        if(direction == false)
-        {
-            projectileSpeed = -projectileSpeed;
-            rend.flipX = false;
-        }
+    //public void ProjectileBehavior(Collider2D other, bool direction)
+    //{
+    //    if(direction == false)
+    //    {
+    //        projectileSpeed = -projectileSpeed;
+    //        rend.flipX = false;
+    //    }
 
-    } 
+    //} 
 }
