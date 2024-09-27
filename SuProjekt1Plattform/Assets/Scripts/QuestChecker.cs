@@ -17,7 +17,7 @@ public class QuestChecker : MonoBehaviour
             {
                 dialogBox.SetActive(true);
                 finishedText.SetActive(true);
-                Invoke("LoadNextLevel", 3.0f);
+                Invoke("LoadNextLevel", 5.0f);
                 levelIsLoading = true;
             }
             else

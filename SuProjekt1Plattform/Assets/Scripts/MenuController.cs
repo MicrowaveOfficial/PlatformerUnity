@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] private GameObject creditsPanel;
+    [SerializeField] private int loadScene = 1;
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(loadScene);
     }
 
     public void QuitGame()
