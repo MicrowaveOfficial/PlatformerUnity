@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
 {
     [SerializeField] private float projectileSpeed = 2f;
     [SerializeField] private int damage = 1;
+    [SerializeField] private float timeActive = 4f;
     private SpriteRenderer rend;
 
     private void Start()
     {
         rend = GetComponent<SpriteRenderer>();
+        Destroy(gameObject, timeActive);
     }
 
     private void Update()
@@ -24,7 +27,14 @@ public class ProjectileMovement : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerMovement>().TakeDamage(damage);
             Destroy(gameObject);
-        }
+        }   
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+            print("Hej");
+            Destroy(gameObject);
+        
     }
 
     public void ProjectileBehavior(Collider2D other, bool direction)
@@ -34,5 +44,6 @@ public class ProjectileMovement : MonoBehaviour
             projectileSpeed = -projectileSpeed;
             rend.flipX = false;
         }
-} 
+
+    } 
 }

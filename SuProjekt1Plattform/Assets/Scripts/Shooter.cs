@@ -44,8 +44,10 @@ public class Shooter : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        print("collision");
         if (other.gameObject.CompareTag("EnemyBlock"))
         {
+            print("enemy");
             moveSpeed = -moveSpeed;
         }
 
@@ -55,13 +57,14 @@ public class Shooter : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(direction == false)  projectileOffset = -projectileOffset;
 
-        Instantiate(projectile, transform.position + (transform.forward * projectileOffset), transform.rotation);
+    private void OnTriggerEnter2D(Collider2D other)
+    {     
         if (other.CompareTag("Player"))
         {
+            if (direction == false) projectileOffset = -projectileOffset;
+
+            Instantiate(projectile, transform.position * projectileOffset + (transform.forward), transform.rotation);
             other.gameObject.GetComponent<ProjectileMovement>().ProjectileBehavior(other, direction);
         }
     }
