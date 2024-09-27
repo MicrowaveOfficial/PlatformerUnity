@@ -179,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageGiven: 1
   knockForce: 200
-  upwardForce: 300
+  upwardForce: 400
 --- !u!1 &4898430991285294106
 GameObject:
   m_ObjectHideFlags: 0
