@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - RedGem
   - Health
+  - Spike
   layers:
   - Default
   - TransparentFX
@@ -54,6 +55,9 @@ TagManager:
     locked: 0
   - name: GroundBackground
     uniqueID: 685211967
+    locked: 0
+  - name: Decorations
+    uniqueID: 1848753119
     locked: 0
   - name: Default
     uniqueID: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private Transform target;
-    [SerializeField] private Vector3 offset = new Vector3(0, 0, -10f);
+    [SerializeField] private Vector3 offset = new Vector3(0, 0, -12f);
     [SerializeField] private float smoothing = 1.0f;
     
     void LateUpdate()
