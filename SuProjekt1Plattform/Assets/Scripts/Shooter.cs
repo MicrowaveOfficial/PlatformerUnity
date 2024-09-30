@@ -11,7 +11,10 @@ public class Shooter : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private float projectileOffsetX = 0.8f;
     [SerializeField] private float projectileOffsetY = 0.8f;
+    [SerializeField] private int damageGiven = 1;
     private bool Shooting;
+    public bool isBoss;
+   
 
     private SpriteRenderer rend;
     private Animator anim; 
@@ -32,20 +35,45 @@ public class Shooter : MonoBehaviour
 
     public void SpawnProjectile()
     {
-        if (player.transform.position.x > transform.position.x)
-        {
-            rend.flipX = true;
-            Instantiate(projectileLeft, new Vector3(transform.position.x + -projectileOffsetX, transform.position.y - projectileOffsetY, transform.position.z), Quaternion.identity);
+        if (!isBoss)
+        { 
+            if (player.transform.position.x > transform.position.x)
+            {
+                rend.flipX = true;
+                Instantiate(projectileLeft, new Vector3(transform.position.x + -projectileOffsetX, transform.position.y - projectileOffsetY, transform.position.z), Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(projectileRight, new Vector3(transform.position.x + -projectileOffsetX, transform.position.y - projectileOffsetY, transform.position.z), Quaternion.identity);
+                rend.flipX = false;
+            }
         }
         else
         {
-            Instantiate(projectileRight, new Vector3(transform.position.x + -projectileOffsetX, transform.position.y - projectileOffsetY, transform.position.z), Quaternion.identity);
-            rend.flipX = false;
+            float randomY = Random.Range(-2f, 3.5f);
+            if (player.transform.position.x > transform.position.x)
+            {
+                rend.flipX = true;
+                Instantiate(projectileLeft, new Vector3(transform.position.x + -projectileOffsetX, transform.position.y - randomY, transform.position.z), Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(projectileRight, new Vector3(transform.position.x + -projectileOffsetX, transform.position.y - randomY, transform.position.z), Quaternion.identity);
+                rend.flipX = false;
+            }
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))  anim.SetBool("Shooting", false);
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<PlayerMovement>().TakeDamage(damageGiven);
+        }
     }
 }
