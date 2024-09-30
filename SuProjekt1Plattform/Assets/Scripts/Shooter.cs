@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Shooter : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class Shooter : MonoBehaviour
     [SerializeField] private float projectileOffsetX = 0.8f;
     [SerializeField] private float projectileOffsetY = 0.8f;
     [SerializeField] private int damageGiven = 1;
+    [SerializeField] private int bossHealth = 10;
     private bool Shooting;
     public bool isBoss;
    
@@ -74,6 +77,38 @@ public class Shooter : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<PlayerMovement>().TakeDamage(damageGiven);
+        }
+    }
+
+    public void Hurt()
+    {
+        if(isBoss)
+        {
+            bossHealth--;
+            if(bossHealth <= 0)
+            {
+                Die();
+            }
+        }
+    }
+
+    private void Die()
+    {
+        GetComponent<Animator>().SetTrigger("Die");
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<CircleCollider2D>().enabled = false;
+        Invoke("LoadMainMenu", 5.0f);
+    }
+    private void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    private void Update()
+    {
+        if(bossHealth <= 0)
+        {
+            Die();
         }
     }
 }
