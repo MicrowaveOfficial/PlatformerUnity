@@ -14,12 +14,13 @@ public class Spike : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerMovement>().TakeDamage(damageGiven);
         }
+        else
+            return;
 
         if(other.transform.position.x > transform.position.x)
         {
             other.gameObject.GetComponent<PlayerMovement>().TakeKnockback(knockForce, upwardForce);
         }
-
         else
         {
             other.gameObject.GetComponent<PlayerMovement>().TakeKnockback(-knockForce, upwardForce);

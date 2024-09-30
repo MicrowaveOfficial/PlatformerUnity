@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
             redGemsCollected++;
             redGemText.text = "" + redGemsCollected;
             audioSource.pitch = Random.Range(0.8f, 1.2f);
-            audioSource.PlayOneShot(pickupSound, 1f);
+            audioSource.PlayOneShot(pickupSound, 0.7f);
             Instantiate(gemParticles, other.transform.position, Quaternion.identity);
         }
 
