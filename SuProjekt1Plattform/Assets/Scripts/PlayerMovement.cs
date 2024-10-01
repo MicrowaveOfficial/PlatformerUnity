@@ -149,6 +149,11 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
+    private void Attack()
+    {
+
+    }
+
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;

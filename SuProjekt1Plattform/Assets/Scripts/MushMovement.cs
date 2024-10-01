@@ -79,4 +79,9 @@ public class MushMovement : MonoBehaviour
             Destroy(gameObject, 3f);   
         }
     }
+
+    public void Die()
+    {
+
+    }
 }
