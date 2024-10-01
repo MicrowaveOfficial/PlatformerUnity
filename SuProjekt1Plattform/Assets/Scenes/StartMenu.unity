@@ -1422,7 +1422,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'A Game By: Ludvig Lindgren, Linnea Liljeroth and Sindri Mar Steingrimsson
+  m_text: 'A Game By: Ludvig Lindgren, Linnea Liljenroth Dickman and Sindri Mar Steingrimsson
 
     Main
     Character, World and Backgrounds: Brullov
@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.3
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
