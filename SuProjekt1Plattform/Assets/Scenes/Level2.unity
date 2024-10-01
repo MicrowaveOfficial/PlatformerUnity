@@ -25966,7 +25966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: That's not enough! Come back when you have 25 gems and I'll let you pass...
+  m_text: That's not enough! Come back when you have 20 gems and I'll let you pass...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dbaacd33fb8a85e4781a3155b9d22189, type: 2}
   m_sharedMaterial: {fileID: 558603249147365560, guid: dbaacd33fb8a85e4781a3155b9d22189, type: 2}
