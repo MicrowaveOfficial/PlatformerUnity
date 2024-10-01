@@ -10,6 +10,8 @@ TagManager:
   - RedGem
   - Health
   - Spike
+  - AttackArea
+  - Boss
   layers:
   - Default
   - TransparentFX

@@ -78,18 +78,22 @@ public class Shooter : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerMovement>().TakeDamage(damageGiven);
         }
+
+        //if (other.gameObject.CompareTag("AttackArea"))
+        //{
+        //    Hurt();
+        //}
     }
 
     public void Hurt()
     {
-        if(isBoss)
-        {
-            bossHealth--;
+        bossHealth--;
+        print("Tjena");
+
             if(bossHealth <= 0)
             {
                 Die();
-            }
-        }
+            }      
     }
 
     private void Die()

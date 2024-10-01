@@ -6,14 +6,19 @@ public class AttackArea : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-       if (other.GetComponent<Shooter>() && other.GetComponent<Shooter>().isBoss)
-        {
-            GetComponent<Shooter>().Hurt();
-        }
+       //if (other.GetComponent<Shooter>() && other.GetComponent<Shooter>().isBoss)
+       // {
+       //     GetComponent<Shooter>().Hurt();
+       // }
 
-        else if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
+        }
+
+        else if (other.CompareTag("Boss"))
+        {
+            other.gameObject.GetComponent<Shooter>().Hurt();
         }
 
     }
