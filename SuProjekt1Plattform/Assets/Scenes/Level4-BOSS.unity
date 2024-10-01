@@ -2236,7 +2236,7 @@ PrefabInstance:
       objectReference: {fileID: 121799638}
     - target: {fileID: 7252035176036221981, guid: 022548e7184a3804eb54dec11b9eed53, type: 3}
       propertyPath: startPosition
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4529,7 +4529,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Please do! He''s just up ahead, but you''ll have to do it on your own!
-    I''m to scared to face him :(
+    I''m too scared to face him :(
 
     Good luck!'
   m_isRightToLeft: 0
@@ -14515,7 +14515,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ba7f7a99c1d659f44af2436f760da97a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 06d60db2551d2434c96d0c7a3b238ab2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.33
   m_Pitch: 1

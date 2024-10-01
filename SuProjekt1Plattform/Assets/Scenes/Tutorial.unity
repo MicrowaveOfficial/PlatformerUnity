@@ -2619,7 +2619,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Monsters hurt you!
 
-    Press []
+    Press [J]
 
     to fight back!'
   m_isRightToLeft: 0
@@ -19864,6 +19864,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 943454506}
     m_Modifications:
+    - target: {fileID: 3973344734150353245, guid: 8b3e58473f8cd694a9be7ca94bd06763, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8446483584849712851, guid: 8b3e58473f8cd694a9be7ca94bd06763, type: 3}
       propertyPath: m_LocalPosition.x
       value: 107.94046

@@ -1998,7 +1998,7 @@ PrefabInstance:
       objectReference: {fileID: 121799638}
     - target: {fileID: 7252035176036221981, guid: 022548e7184a3804eb54dec11b9eed53, type: 3}
       propertyPath: startPosition
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2989,7 +2989,7 @@ MonoBehaviour:
   finishedText: {fileID: 1166661440}
   unfinishedText: {fileID: 714095154}
   questGoal: 0
-  levelToLoad: 0
+  levelToLoad: 4
 --- !u!1001 &606283801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9456,7 +9456,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.8
+  m_fontSize: 27
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9492,7 +9492,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 37.280563, y: -10.140358, z: 33.13829, w: -61.98044}
+  m_margin: {x: 64.417725, y: -10.140358, z: 73.69534, w: -61.98044}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -30627,8 +30627,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39151, y: -212}
-  m_SizeDelta: {x: 1095.6, y: 671.8}
+  m_AnchoredPosition: {x: 39351.715, y: -212}
+  m_SizeDelta: {x: 794.4, y: 671.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1668708713
 MonoBehaviour:
