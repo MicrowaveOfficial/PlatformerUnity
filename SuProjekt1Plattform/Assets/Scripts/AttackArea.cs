@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class AttackArea : MonoBehaviour
 {
-    private int damage = 3;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-       if (other.CompareTag("Enemy"))
+       if (other.GetComponent<Shooter>() && other.GetComponent<Shooter>().isBoss)
+        {
+            GetComponent<Shooter>().Hurt();
+        }
+        else if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
         }
 
-       if (other.GetComponent<Shooter>().isBoss)
-        {
-            getComponent<Shooter>().Hurt;
-        }
     }
 }
