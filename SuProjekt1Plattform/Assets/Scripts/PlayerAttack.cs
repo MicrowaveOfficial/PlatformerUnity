@@ -7,8 +7,6 @@ public class PlayerAttack : MonoBehaviour
     private GameObject attackArea = default;
     private Animator anim;
 
-    private bool attacking = false;
-
     private float timeToAttack = 0.25f;
     private float timer = 0f;
   
@@ -42,14 +40,19 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
-        anim.SetBool("isAttacking", true);
-        attacking = true;        
+        anim.SetBool("isAttacking", true);    
     }
 
     public void stopAttack()
     {
-        attackArea.SetActive(attacking);
+        attackArea.SetActive(true);
         anim.SetBool("isAttacking", false);
-        attacking = false;
+        Invoke("AttackAreaOff", 0.2f);
+        print("HEJ");
+    }
+
+    private void AttackAreaOff()
+    {
+        attackArea.SetActive(false);
     }
 }

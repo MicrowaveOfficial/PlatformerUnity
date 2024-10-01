@@ -10,6 +10,7 @@ public class AttackArea : MonoBehaviour
         {
             GetComponent<Shooter>().Hurt();
         }
+
         else if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);

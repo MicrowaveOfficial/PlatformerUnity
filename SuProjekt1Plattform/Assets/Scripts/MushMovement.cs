@@ -64,24 +64,27 @@ public class MushMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(other.GetComponent<Rigidbody2D>().velocity.x, 0);
-            other.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, bounce));
-            GetComponent<Animator>().SetTrigger("Hit");
-            GetComponent<BoxCollider2D>().enabled = false;
-            GetComponent<CircleCollider2D>().enabled = false;
-            GetComponent<Rigidbody2D>().gravityScale = 0;
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            canMove = false;
-            Destroy(gameObject, 3f);   
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        other.GetComponent<Rigidbody2D>().velocity = new Vector2(other.GetComponent<Rigidbody2D>().velocity.x, 0);
+    //        other.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, bounce));
+    //        GetComponent<Animator>().SetTrigger("Hit");
+    //        GetComponent<BoxCollider2D>().enabled = false;
+    //        GetComponent<CircleCollider2D>().enabled = false;
+    //        GetComponent<Rigidbody2D>().gravityScale = 0;
+    //        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    //        canMove = false;
+    //        Destroy(gameObject, 3f);   
+    //    }
+    //}
 
-    public void Die()
-    {
-
-    }
+    //public void Die()
+    //{
+    //    GetComponent<CircleCollider2D>().enabled = false;
+    //    GetComponent<Animator>().SetTrigger("Hit");
+    //    canMove = false;
+    //    Destroy(gameObject, 3f);
+    //}
 }
