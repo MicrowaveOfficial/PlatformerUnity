@@ -88,7 +88,6 @@ public class Shooter : MonoBehaviour
     public void Hurt()
     {
         bossHealth--;
-        print("Tjena");
 
             if(bossHealth <= 0)
             {
